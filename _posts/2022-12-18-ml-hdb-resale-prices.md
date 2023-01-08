@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Machine Learning with Python - HDB Resale Flat Market"
-subtitle: "Deep dive into HDB resale prices."
+subtitle: "Deep dive into HDB resale flat prices."
 background: '/img/posts/ml-hdb-resale-prices/hdb-landscape.jpg'
 ---
 
@@ -12,16 +12,17 @@ background: '/img/posts/ml-hdb-resale-prices/hdb-landscape.jpg'
 - Since the purchase price of individual units are not made publicly available, it is not possible to make ROI the subject of study
 - Determine and compare the predictive accuracies of a multiple linear regression model to that of popular XGBoost algorithm model
 
+<br>
 
 ## Exploratory Data Analysis
 
 <p align="center">
-  <img width="800" height="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/pair_plot.png">  
+  <img width="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/pair_plot.png">  
 </p>
 
 <p align="center">
-  <img width="400" height="400" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/displot_resale_date.png">
-  <img width="400" height="400" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/displot_remaining_lease.png">
+  <img width="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/displot_resale_date.png">
+  <img width="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/displot_remaining_lease.png">
 </p>
 
 <p align="center">
@@ -36,7 +37,7 @@ background: '/img/posts/ml-hdb-resale-prices/hdb-landscape.jpg'
 keys to new BTO owners
 - It is probable that many owners rush to sell their flats upon reaching the 5-year Minimum Occupation Period (MOP)
 
-
+<br>
 
 
 ## Multiple Linear Regression Model
@@ -46,14 +47,14 @@ With RMSE of 63308 and mean percentage error of 10.82% on the training set, the 
 <ins> Numerical Features </ins>
 
 <p align="center">
-  <img width="600" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/numerical_variables.png"> 
+  <img width="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/numerical_variables.png"> 
 </p>
 
 <ins> Categorical Features </ins>
 
 <p align="center">
-  <img width="300" height="250" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/flat_types.png"> 
-  <img width="500" height="250" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/flat_models.png">
+  <img width="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/flat_types.png"> 
+  <img width="800" src="https://raw.githubusercontent.com/Ziming-Lin/ml-hdb-resale-prices/main/assets/flat_models.png">
 </p>
 
 <p align="center">
@@ -68,8 +69,10 @@ With RMSE of 63308 and mean percentage error of 10.82% on the training set, the 
 - From the scale of coefficients, station name feature is usually the main price affecting factor
 - While it seems that floor area feature is only slightly ahead of remaining lease feature, the size of a flat should be wholly assessed by grouping floor area and flat type
 - Feature importance is then:
-> Flat Size > Remaining Lease > Unit Level > Distance to nearest MRT Station > Building Height
-
+```
+Flat Size > Remaining Lease > Unit Level > Distance to nearest MRT Station > Building Height
+```
+<br>
 
 ## XGBoost Model
 
@@ -78,6 +81,7 @@ Although XGBoost models have a tendency to overfit training datasets, here the X
 
 <ins> Comparison of Test Set Scores </ins>
 
+{:class="table table-bordered"}
 | Scoring                   | Multiple Linear Regression | XGBoost (Untuned) | XGBoost (Tuned) |
 | --------------------------|----------------------------|-------------------|-----------------|
 | Adjusted R-Squared        | 0.8567                     | 0.9314            | 0.9616          |
@@ -88,6 +92,7 @@ Although XGBoost models have a tendency to overfit training datasets, here the X
 
 <ins> Prediction Sample (First 20 in Test Set) </ins>
 
+{:class="table table-bordered"}
 | Actual Resale Price       | Predicted Price - <br> Multiple Linear Regression |  Predicted Price - <br> XGBoost (Tuned)|
 | :------------------------:|:-------------------------------------------------:|:--------------------------------------:|
 | 505000 | 406608 | 518087  |
@@ -111,6 +116,13 @@ Although XGBoost models have a tendency to overfit training datasets, here the X
 | 570000 | 608766 | 595898  |
 | 330000 | 316751 | 357157  |
 
+
+<br>
+
 ## Planned Features
 
 - Pre-processing pipeline for newer test data
+
+<br>
+
+You can view the series of Jupyter notebooks in my repository [here](https://github.com/Ziming-Lin/ml-hdb-resale-prices).

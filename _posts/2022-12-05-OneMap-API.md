@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tableau - Visualising OneMap API Data"
-subtitle: "View Singapore's population stats differentiated by planning area."
+subtitle: "View and compare Singapore's population statistics by planning area."
 background: '/img/posts/OneMap-API/singapore-map.jpg'
 ---
 

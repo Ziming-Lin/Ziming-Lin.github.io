@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tableau - Visualising Steam Spy API Data"
-subtitle: "View Singapore's population stats differentiated by planning area."
+subtitle: "A Tableau visualisation about PC gaming with data obtained using Steam Spy's API."
 background: '/img/posts/Steam-API/steam-logo.png'
 ---
 
