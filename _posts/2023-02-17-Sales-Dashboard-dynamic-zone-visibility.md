@@ -13,7 +13,7 @@ background: '/img/posts/Sales-Dashboard/Sales-Dashboard-background.jpg'
 
 ## About the Dashboard
 
-With Tableau's 2022.3 update comes the introduction of a new feature called Dynamic Zone Visibility, which allows control over what gets shown on the dashboard. In the past, sheet swapping would be achieved through inorganic techniques or 'hacks' and it would come with downsides. But with Dynamic Zone Visibility, creating professional-looking dashboards or just simple sheet swapping becomes much easier than before.
+With Tableau's 2022.3 update comes the introduction of a new feature called Dynamic Zone Visibility which allows more control over the elements shown on a dashboard. In the past, a simple sheet swap would be achieved through inorganic techniques or 'hacks' frequently accompanied with downsides. But with Dynamic Zone Visibility, creating professional-looking dashboards or just simple sheet swapping becomes much easier than before.
 
 At its simplest, you would place all elements in the same dashboard and control the visibility of any element (or container) with a boolean parameter. Combining this with parameter actions then results in a 'seamless' dashboard.
 
