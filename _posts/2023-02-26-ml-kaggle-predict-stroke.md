@@ -2,7 +2,7 @@
 layout: post
 title: "Machine Learning with Python - Kaggle Competition (Stroke Prediction)"
 subtitle: "Dealing with Stroke Prediction Classification Dataset"
-background: '/img/posts/ml-hdb-resale-prices/hdb-landscape.jpg'
+background: '/img/posts/ml-kaggle-stroke/stroke banner image.jpg'
 ---
 
 
